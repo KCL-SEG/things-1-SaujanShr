@@ -1,15 +1,15 @@
 from django.test import TestCase
-from things.models import Things
+from things.models import Thing
 from django.core.exceptions import ValidationError
 
 class ThingModelTestCase(TestCase):
     def setUp(self):
-        self.thing1 = Things.objects.create(
+        self.thing1 = Thing.objects.create(
             name="thing1",
             description="description1",
             quantity=1
         )
-        self.thing2 = Things.objects.create(
+        self.thing2 = Thing.objects.create(
             name="thing2",
             description="description2",
             quantity=2
